@@ -167,6 +167,35 @@
   .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
   .reveal.in{opacity:1;transform:none}
   @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}}
+
+  /* ---- mobile ---- */
+  @media(max-width:680px){
+    section{padding:60px 0}
+    .wrap{padding:0 18px}
+    .hero{padding:74px 0 56px}
+    .hero .wrap{gap:24px;justify-content:center;text-align:center}
+    .hero .text{min-width:0}
+    .status{margin-left:auto;margin-right:auto}
+    .cta{justify-content:center}
+    .hero .lead{font-size:1.04rem;margin-left:auto;margin-right:auto}
+    h2.title{font-size:1.55rem;margin-bottom:24px}
+    .pad{padding:24px}
+    .about p{font-size:1rem}
+    .avatar{width:172px;height:172px}
+    .avatar .ring{width:160px;height:160px}
+    .avatar .photo{width:142px;height:142px}
+    .cursor{display:none}
+    footer{padding:64px 20px 54px}
+    footer h2{font-size:1.5rem}
+  }
+  @media(max-width:430px){
+    nav .wrap{height:54px}
+    nav .brand{font-size:.9rem}
+    nav .links a{margin-left:11px;font-size:.72rem}
+    .hero h1{letter-spacing:-1px}
+    .btn{padding:10px 15px;font-size:.85rem}
+    .flow{font-size:.76rem}
+  }
 </style>
 </head>
 <body>
