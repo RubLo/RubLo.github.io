@@ -75,7 +75,7 @@
   .hero{padding:130px 0 110px;position:relative;z-index:1}
   .hero .wrap{display:flex;align-items:center;gap:50px;flex-wrap:wrap-reverse}
   .hero .text{flex:1;min-width:290px}
-  .status{display:inline-flex;align-items:center;gap:8px;font-size:.76rem;color:var(--teal);border:1px solid var(--line);border-radius:20px;padding:5px 13px;margin-bottom:20px;background:rgba(10,16,24,.5)}
+  .status{display:inline-flex;align-items:center;gap:8px;font-size:.76rem;color:var(--teal);border:1px solid var(--line);border-radius:20px;padding:5px 13px;margin-bottom:20px;background:rgba(10,16,24,.5);white-space:nowrap}
   .status .dot{width:7px;height:7px;border-radius:50%;background:var(--teal);box-shadow:0 0 10px var(--teal);animation:pulse 2s infinite}
   @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
   .hero h1{font-size:clamp(2.5rem,6.5vw,4.2rem);line-height:1.04;letter-spacing:-2px;font-weight:800;text-shadow:0 2px 40px rgba(0,0,0,.5)}
@@ -169,31 +169,32 @@
   @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}}
 
   /* ---- mobile ---- */
-  @media(max-width:680px){
+  @media(max-width:760px){
+    nav .links{display:none}          /* single-scroll page — drop the wrapping link row on mobile */
     section{padding:60px 0}
     .wrap{padding:0 18px}
-    .hero{padding:74px 0 56px}
-    .hero .wrap{gap:24px;justify-content:center;text-align:center}
-    .hero .text{min-width:0}
+    .hero{padding:56px 0 52px}
+    .hero .wrap{flex-direction:column-reverse;align-items:center;text-align:center;gap:26px}
+    .hero .text{min-width:0;width:100%}
     .status{margin-left:auto;margin-right:auto}
     .cta{justify-content:center}
     .hero .lead{font-size:1.04rem;margin-left:auto;margin-right:auto}
     h2.title{font-size:1.55rem;margin-bottom:24px}
     .pad{padding:24px}
     .about p{font-size:1rem}
-    .avatar{width:172px;height:172px}
-    .avatar .ring{width:160px;height:160px}
-    .avatar .photo{width:142px;height:142px}
+    .avatar{width:184px;height:184px}
+    .avatar .ring{width:172px;height:172px}
+    .avatar .photo{width:154px;height:154px}
     .cursor{display:none}
+    .card a.gh{margin-left:0}
     footer{padding:64px 20px 54px}
     footer h2{font-size:1.5rem}
   }
   @media(max-width:430px){
     nav .wrap{height:54px}
-    nav .brand{font-size:.9rem}
-    nav .links a{margin-left:11px;font-size:.72rem}
+    nav .brand{font-size:.95rem}
     .hero h1{letter-spacing:-1px}
-    .btn{padding:10px 15px;font-size:.85rem}
+    .btn{padding:10px 16px;font-size:.85rem}
     .flow{font-size:.76rem}
   }
 </style>
